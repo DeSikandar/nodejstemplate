@@ -11,7 +11,7 @@ const controller = {
   },
   async agrmovie(req, res) {
     const data = await comment.aggregate([
-      { $limit: 5 },
+      { $limit: 10 },
       { $unwind: '$date' },
       {
         $lookup: {
