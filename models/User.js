@@ -17,13 +17,9 @@ const UserSchema = new Schema(
       type: String,
       select: false,
     },
-    type: {
-      type: String,
-      enum: ['user', 'admin'],
-      default: 'user',
-    },
   },
-  { timestamps: true }
+  { timestamps: true },
+  { collection: 'users' }
 );
 
 UserSchema.pre('save', function (next) {
